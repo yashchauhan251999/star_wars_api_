@@ -46,13 +46,13 @@ const StarWarsPlanets = () => {
     backgroundImage: `url('https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`, 
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
-    minHeight: '100vh', // Set minimum height to cover the viewport
-    position: 'relative', // Add position relative to the parent
+    minHeight: '100vh', 
+    position: 'relative', 
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundAttachment: 'fixed', // Make background image non-scrollable
+    backgroundAttachment: 'fixed', 
   }}>
       <div>
         <Typography variant="h2" align="center" color={'white'} marginBottom={"20px"}><b><u>Star Wars Planets</u></b></Typography>
@@ -80,7 +80,7 @@ const StarWarsPlanets = () => {
                 >
              <Typography marginTop={"10px"} marginBottom={"20px"} variant='h5' fontWeight="bold" color="white" sx={{ textTransform: 'uppercase' }}>{planet.name}</Typography>
               </Paper>
-                <Divider/> {/* Divider moved here */}
+                <Divider/> 
 
                 <Paper 
                   style={{
@@ -151,19 +151,19 @@ const StarWarsPlanets = () => {
         </div>
       ))}
       </div>}
-      {/* Button container */}
+    
       <div style={{
     position: 'fixed',
-    bottom: '20px', // Adjust as per your requirement
-    left: '50%', // Center horizontally
-    transform: 'translateX(-50%)', // Center horizontally
+    bottom: '20px', 
+    left: '50%', 
+    transform: 'translateX(-50%)', 
     display: 'flex',
     justifyContent: 'space-between',
-    padding: '0 100px', // Adjust padding for spacing
-    boxSizing: 'border-box', // Ensure padding doesn't affect width
+    padding: '0 100px', 
+    boxSizing: 'border-box', 
     width: '100%',
-    zIndex: 999, // Ensure buttons are above other content
-    marginBottom: '250px', // Add bottom margin
+    zIndex: 999, 
+    marginBottom: '250px', 
 }}>
     <Button variant='contained' onClick={handlePrevPage} style={{ width: '100px', height: '100px', background: "#3498DB" }}>
         Previous Page
