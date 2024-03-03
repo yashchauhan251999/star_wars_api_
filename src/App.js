@@ -43,7 +43,7 @@ const StarWarsPlanets = () => {
 
   return (
    <div style={{ 
-    backgroundImage: `url('https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`, 
+    backgroundImage: `url('https://images.pexels.com/photos/12491653/pexels-photo-12491653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`, 
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
     minHeight: '100vh', 
@@ -72,9 +72,9 @@ const StarWarsPlanets = () => {
                     marginTop: "50px",
 
                     border: '2px solid white',
-                    backgroundImage: 'linear-gradient(45deg, #6C3483, #F4D03F)',
+                    backgroundImage: 'linear-gradient(45deg, #09203F, #537895)',
                     padding: '10px',
-                    boxShadow: '0px 0px 30px 10px #ffffff',
+                    boxShadow: '0px 0px 30px 10px #D6EAF8 ',
                
                   }}
                 >
@@ -87,10 +87,10 @@ const StarWarsPlanets = () => {
                     textAlign: 'left', 
                     marginBottom: '20px', 
                     position: 'relative',
-                  
-                    backgroundImage: 'linear-gradient(180deg, #2874A6,#E8F8F5 , #FEF9E7 70%, #F9E79F)',
+                    border: '2px solid white',
+                    backgroundImage: 'linear-gradient(180deg, #2874A6,#E8F8F5 , #FDEBD0 70%, #73C6B6)',
                     padding: '20px',
-                    boxShadow: '0px 0px 10px 5px #ffffff',
+                    boxShadow: '0px 0px 5px 2px #ffffff',
                   }}
                 >
   <Grid container spacing={3}>
