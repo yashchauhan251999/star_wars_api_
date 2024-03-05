@@ -42,50 +42,46 @@ const StarWarsPlanets = () => {
   };
 
   return (
-   <div style={{ 
-    backgroundImage: `url('https://images.pexels.com/photos/12491653/pexels-photo-12491653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`, 
-    backgroundSize: 'cover', 
-    backgroundPosition: 'center',
-    minHeight: '100vh', 
-    position: 'relative', 
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundAttachment: 'fixed', 
-  }}>
+    <div style={{
+      backgroundImage: `url('https://images.pexels.com/photos/12491653/pexels-photo-12491653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      minHeight: '100vh',
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundAttachment: 'fixed',
+    }}>
       <div>
         <Typography variant="h2" align="center" color={'white'} marginBottom={"20px"}><b><u>Star Wars Planets</u></b></Typography>
       </div>
       {isLoading ? <>
-        <CircularProgress/>
-      </>:
-      <div>
-      {planets.map((planet, index) => (
-        <div key={index}  >
-          <Grid container justifyContent="center" spacing={2}>
-            <Grid item xs={4}>
-            <Paper 
+        <CircularProgress />
+      </> :
+        <div>
+          <Grid container spacing={2} justifyContent="center">
+            {planets.map((planet, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}>
+                <Paper
                   style={{
-                    textAlign: 'center', 
-                    marginBottom: '20px', 
-                    marginTop: "50px",
-
+                    textAlign: 'center',
+                    marginBottom: '5px',
                     border: '2px solid white',
                     backgroundImage: 'linear-gradient(45deg, #09203F, #537895)',
                     padding: '10px',
                     boxShadow: '0px 0px 30px 10px #D6EAF8 ',
-               
                   }}
                 >
-             <Typography marginTop={"10px"} marginBottom={"20px"} variant='h5' fontWeight="bold" color="white" sx={{ textTransform: 'uppercase' }}>{planet.name}</Typography>
-              </Paper>
-                <Divider/> 
-
-                <Paper 
+                  <Typography marginTop={"10px"} marginBottom={"5px"} variant='h5' fontWeight="bold" color="white" sx={{ textTransform: 'uppercase' }}>{planet.name}</Typography>
+                </Paper>
+                <Divider />
+  
+                <Paper
                   style={{
-                    textAlign: 'left', 
-                    marginBottom: '20px', 
+                    textAlign: 'left',
+                    marginBottom: '20px',
                     position: 'relative',
                     border: '2px solid white',
                     backgroundImage: 'linear-gradient(180deg, #2874A6,#E8F8F5 , #FDEBD0 70%, #73C6B6)',
@@ -93,89 +89,88 @@ const StarWarsPlanets = () => {
                     boxShadow: '0px 0px 5px 2px #ffffff',
                   }}
                 >
-  <Grid container spacing={3}>
-    <Grid item xs={6} sm={6}>
-      <Typography style={{ textAlign: 'left', marginLeft:'50px'}}><b>Orbital Period:</b></Typography>
-    </Grid>
-    
-    <Grid item xs={6} sm={6}>
-      <Typography style={{ textAlign: 'right', marginRight:"50px" }}>{planet.orbital_period}</Typography>
-    </Grid>
-
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'left', marginLeft:'50px' }}><b>Diameter:</b></Typography>
-    </Grid>
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'right', marginRight:"50px" }}>{planet.diameter}</Typography>
-    </Grid>
-
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'left', marginLeft:'50px' }}><b>Climate:</b></Typography>
-    </Grid>
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'right', marginRight:"50px" }}>{planet.climate}</Typography>
-    </Grid>
-
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'left', marginLeft:'50px' }}><b>Gravity:</b></Typography>
-    </Grid>
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'right', marginRight:"50px" }}>{planet.gravity}</Typography>
-    </Grid>
-
-    <Grid item xs={6} sm={6}>
-        <Typography style={{ textAlign: 'left', marginLeft:'50px' }}><b>Terrain:</b></Typography>
-    </Grid>
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'right', marginRight:"50px" }}>{planet.terrain}</Typography>
-    </Grid>
-
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'left' , marginLeft:'50px'}}><b>Surface Water:</b></Typography>
-    </Grid>
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'right', marginRight:"50px" }}>{planet.surface_water}</Typography>
-    </Grid>
-
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'left' , marginLeft:'50px'}}><b>Population:</b></Typography>
-    </Grid>
-    <Grid item xs={6} sm={6}>
-    <Typography style={{ textAlign: 'right', marginRight:"50px" }}>{planet.population}</Typography>
-    </Grid>
-  </Grid>
-</Paper>
-              
-            </Grid>
+                  <Grid container spacing={1}>
+                    <Grid item xs={6}>
+                      <Typography><b>Orbital Period:</b></Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography>{planet.orbital_period}</Typography>
+                    </Grid>
+  
+                    <Grid item xs={6}>
+                      <Typography><b>Diameter:</b></Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography>{planet.diameter}</Typography>
+                    </Grid>
+  
+                    <Grid item xs={6}>
+                      <Typography><b>Climate:</b></Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography>{planet.climate}</Typography>
+                    </Grid>
+  
+                    <Grid item xs={6}>
+                      <Typography><b>Gravity:</b></Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography>{planet.gravity}</Typography>
+                    </Grid>
+  
+                    <Grid item xs={6}>
+                      <Typography><b>Terrain:</b></Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography>{planet.terrain}</Typography>
+                    </Grid>
+  
+                    <Grid item xs={6}>
+                      <Typography><b>Surface Water:</b></Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography>{planet.surface_water}</Typography>
+                    </Grid>
+  
+                    <Grid item xs={6}>
+                      <Typography><b>Population:</b></Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography>{planet.population}</Typography>
+                    </Grid>
+                  </Grid>
+                </Paper>
+              </Grid>
+            ))}
           </Grid>
         </div>
-      ))}
-      </div>}
-    
+      }
+  
       <div style={{
-    position: 'fixed',
-    bottom: '20px', 
-    left: '50%', 
-    transform: 'translateX(-50%)', 
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: '0 100px', 
-    boxSizing: 'border-box', 
-    width: '100%',
-    zIndex: 999, 
-    marginBottom: '250px', 
-}}>
-    <Button variant='contained' onClick={handlePrevPage} style={{ width: '100px', height: '100px', background: "#3498DB" }}>
-        Previous Page
-    </Button>
-    <Button variant='contained' onClick={handleNextPage} style={{ width: '100px', height: '100px', background: "#3498DB"  }}>
-        Next Page
-    </Button>
-</div>
-
-
+        position: 'fixed',
+        bottom: '20px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        display: 'flex',
+        justifyContent: 'space-between',
+        padding: '0 20px',
+        boxSizing: 'border-box',
+        width: '100%',
+        zIndex: 999,
+        marginBottom: '20px',
+      }}>
+        <Button variant='contained' onClick={handlePrevPage} style={{ minWidth: '100px', height: '50px', background: "#3498DB" }}>
+          Previous Page
+        </Button>
+        <Button variant='contained' onClick={handleNextPage} style={{ minWidth: '100px', height: '50px', background: "#3498DB" }}>
+          Next Page
+        </Button>
+      </div>
+  
+  
     </div>
   );
+  
 }
 
 export default StarWarsPlanets;
